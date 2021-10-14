@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Primes {static String result="" ;
+    public static void main(String args[]) {
+        Scanner scanner = new Scanner(System.in);
+        String S = scanner.nextLine();
+        reverseString(S);
+        if(isPalindrome(S))System.out.println("True");else System.out.println("False");
+    }
+    public static String reverseString(String S) {
+        for (int i = 0; i < S.length(); i++) {
+            result = S.charAt(i) + result;
+        }
+        return result;
+    }
+    public static boolean isPalindrome(String S){
+        return result.equals(S);
+    }
+}
